@@ -1,6 +1,6 @@
 # karma-chrome-launcher
 
-> Launcher for Google Chrome and Google Chrome Canary.
+> Launcher for Safari.
 
 For more information on Karma see the [homepage].
 

@@ -1,19 +1,19 @@
 {
-  "name": "karma-chrome-launcher",
+  "name": "karma-safari-launcher",
   "version": "0.0.1",
-  "description": "A Karma plugin. Launcher for Chrome and Chrome Canary.",
+  "description": "A Karma plugin. Launcher for Safari.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/karma-runner/karma-chrome-launcher.git"
+    "url": "git://github.com/explicitcall/karma-safari-launcher.git"
   },
   "keywords": [
     "karma-plugin",
     "launcher",
-    "chrome"
+    "safari"
   ],
   "author": "Vojta Jina <vojta.jina@gmail.com>",
   "dependencies": {},

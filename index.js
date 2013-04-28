@@ -3,7 +3,7 @@ var SafariBrowser = function(baseBrowserDecorator) {
 
   this._getOptions = function(url) {
     return [
-      '-a',
+      '-Wna',
       'Safari',
       url
     ];

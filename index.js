@@ -1,11 +1,22 @@
+var fs = require('fs');
+var path = require('path');
+
 var SafariBrowser = function(baseBrowserDecorator) {
   baseBrowserDecorator(this);
 
   this._getOptions = function(url) {
+    var HTML_TPL = path.normalize(__dirname + '/static/safari.html');
+
+    var data = fs.readFileSync(HTML_TPL);
+    var content = data.toString().replace('%URL%', url);
+    var staticHtmlPath = this._tempDir + '/redirect.html';
+
+    fs.writeFileSync(staticHtmlPath, content);
+
     return [
       '-Wna',
       'Safari',
-      url
+      staticHtmlPath
     ];
   };
 };
@@ -14,7 +25,7 @@ SafariBrowser.prototype = {
   name: 'Safari',
 
   DEFAULT_CMD: {
-    darwin: '/usr/bin/open'
+    darwin: '/Applications/Safari.app/Contents/MacOS/Safari'
   },
   ENV_CMD: 'SAFARI_BIN'
 };
